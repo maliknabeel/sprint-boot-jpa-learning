@@ -26,7 +26,7 @@ public class StudentRecords {
     public StudentModals findById(int studentId){
         Optional<EntityStudentsrecords> entityStudentsrecords = studentRecordRepository.findById(studentId);
         if(entityStudentsrecords.isPresent()){
-            return modelMapper.map(entityStudentsrecords, StudentModals.class); 
+            return modelMapper.map(entityStudentsrecords, StudentModals.class);
         }
         return null;
     }
